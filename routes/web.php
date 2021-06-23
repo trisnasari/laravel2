@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\KeluargaController;
+use App\Http\Controllers\KegiatanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +31,5 @@ Route::get('/dashboard',[HomeController::class,'index'])->name('dashboard')->mid
 // Route::get('dasboard', 'App\Http\Controllers\DesaController@index')->name('dasboard')->middleware(['auth:sanctum', 'verified']);
 
 Route::resource('pegawai', PegawaiController::class);
+Route::resource('keluarga',KeluargaController::class);
+Route::resource('kegiatan',KegiatanController::class);
